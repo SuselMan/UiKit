@@ -1,0 +1,6 @@
+.link {
+    padding: var(--spacing-lg);
+    color: var(--link-text);
+    font-size: var(--font-size-md);
+    text-decoration: none;
+}

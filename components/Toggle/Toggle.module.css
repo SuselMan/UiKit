@@ -1,0 +1,30 @@
+.toggle {
+    --width: 64px;
+    --height: 32px;
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--second-bg);
+    position: relative;
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.toggle.checked {
+    background-color: var(--main-active-color);
+}
+
+.circle {
+    position: absolute;
+    left: var(--spacing-sm);
+    top: var(--spacing-sm);
+    width: var(--height);
+    height: var(--height);
+    transition: all 0.2s;
+    background-color: var(--main-bg);
+}
+
+.toggle.checked .circle {
+    left: calc(var(--width) - var(--height) + var(--spacing-sm));
+    background-color: var(--main-bg);
+}

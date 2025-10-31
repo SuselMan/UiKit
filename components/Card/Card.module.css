@@ -1,0 +1,11 @@
+@import '../../styles/colors.module.css';
+
+.card {
+    padding: var(--spacing-md);
+    background: var(--main-bg);
+    border: 1px solid var(--border-color);
+}
+
+.elevated {
+    box-shadow: var(--box-shadow-lg)
+}

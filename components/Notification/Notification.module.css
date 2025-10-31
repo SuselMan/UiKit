@@ -1,0 +1,29 @@
+.notification {
+    padding: var(--spacing-md);
+    background-color: var(--second-bg);
+    color: var(--main-text-color);
+    font-size: var( --font-size-md);
+    box-sizing: border-box;
+}
+
+.warning {
+    background-color: var(--warning-bg);
+}
+
+.error {
+    background-color: var(--error-bg);
+}
+
+.sucess {
+    background-color: var(--sucess-bg);
+}
+
+.lg {
+    padding: var(--spacing-lg);
+    font-size: var( --font-size-lg);
+}
+
+.sm {
+    padding: var(--spacing-sm);
+    font-size: var( --font-size-sm);
+}

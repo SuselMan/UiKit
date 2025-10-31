@@ -1,0 +1,41 @@
+.overlay {
+    background-color: var(--overlay-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: var(--z-index-modal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    pointer-events: auto;
+}
+
+.modal {
+    padding: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: var(--main-text-color);
+    max-width: 100%;
+}
+
+.header {
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.closeButton {
+    color: var(--main-text-color);
+    padding: var(--spacing-md);
+}

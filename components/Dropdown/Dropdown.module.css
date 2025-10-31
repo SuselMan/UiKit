@@ -1,0 +1,25 @@
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    position: absolute;
+    right: 0;
+    top: 64px;
+    min-width: 100%;
+    background-color: var(--main-bg);
+    border: 1px solid var(--border-color);
+    z-index: var(--z-index-dropdown);
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    width: 100%;
+}
+
+.isOpen {
+    background-color: var(--second-bg);
+}

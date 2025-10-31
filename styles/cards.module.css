@@ -1,0 +1,14 @@
+@import './colors.module.css';
+
+.card {
+    position: fixed;
+    pointer-events: auto;
+    background-color: var(--main-bg);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+}
+
+.glass {
+    background-color: var(--opacity-main-bg);
+    backdrop-filter: blur(var(--blur-radius));
+}

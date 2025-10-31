@@ -1,0 +1,35 @@
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    position: absolute;
+    right: 0;
+    top: 63px;
+    width: calc(100% - var(--border-width) - var(--border-width));
+    background-color: var(--main-bg);
+    border: 1px solid var(--border-color);
+    z-index: var(--z-index-dropdown);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.menuItem {
+    width: 100%;
+}
+
+.option {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.openedInput {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
