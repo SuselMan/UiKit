@@ -5,11 +5,12 @@
     "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "Bundler",
+    "allowArbitraryExtensions": true,
+    "types": ["vite/client"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
     "typeRoots": [
       "./types",
       "./",
