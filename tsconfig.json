@@ -5,17 +5,10 @@
     "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "Bundler",
-    "allowArbitraryExtensions": true,
-    "types": ["vite/client"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "typeRoots": [
-      "./types",
-      "./",
-      "./node_modules/@types"
-    ]
+    "skipLibCheck": true
   },
   "include": ["./**/*.ts", "./**/*.tsx", "./**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
