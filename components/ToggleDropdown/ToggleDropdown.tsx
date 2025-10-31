@@ -31,13 +31,15 @@ const ToggleDropdown: React.FC<ToggleDropdownProps> = ({
         return current === option;
     };
 
+    const currentKey = Array.isArray(current) ? current.join(',') : current;
+
     return (
         <Dropdown
-            key={current || options.join(',')}
+            key={currentKey || options.join(',')}
             className={className}
             header={
                 <>
-                    <span>{voc[current] || current || placeholder}</span>
+                    <span>{voc[currentKey] || currentKey || placeholder}</span>
                 </>
             }
         >

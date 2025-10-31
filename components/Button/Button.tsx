@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './Button.module.css';
 
-type ButtonVariant = '' | 'ghost' | 'active' | 'secondary' | 'danger';
-type ButtonSize = '' | 'lg';
+type ButtonVariant =  'primary' |'ghost' | 'active' | 'secondary' | 'danger';
+type ButtonSize =  'lg';
 
 type ButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {
     type?: ButtonVariant;
@@ -16,15 +16,16 @@ const Button: React.FC<ButtonProps> = ({
     className = '',
     onClick,
     disabled = false,
-    type = '',
-    size = '',
+    type = 'primary',
+    size = 'lg',
     ...props
 }) => {
-    const type2Class = {
+    const type2Class: Record<ButtonVariant, string>  = {
         ghost: classes.ghost,
         active: classes.active,
         secondary: classes.secondary,
         danger: classes.danger,
+        primary: '',
     };
 
     const size2Class = {

@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import classes from './Notification.module.css';
 
-type NotificationType = '' | 'neutral' | 'warning' | 'error' | 'success';
+type NotificationType = 'neutral' | 'warning' | 'error' | 'success';
 type NotificationSize = 'lg' | 'md' | 'sm';
 
 type NotificationProps = {
@@ -15,7 +15,7 @@ type NotificationProps = {
 const Notification: React.FC<NotificationProps> = ({
     children,
     className = '',
-    type = '',
+    type = 'neutral',
     size = 'md',
 }) => {
     const type2Class = {

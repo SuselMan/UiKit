@@ -33,7 +33,7 @@ const SearchSelect: React.FC<SearchSelectProps> = ({ options = [], onChange = ()
     return (
         <div className={classes.dropdown} ref={ref}>
             <Input
-                onClick={onSearchChange}
+                onClick={() => setIsOpen(true)}
                 onChange={onSearchChange}
                 value={searchString}
                 placeholder={'Select columns'}
