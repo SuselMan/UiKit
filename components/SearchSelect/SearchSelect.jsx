@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './SearchSelect.module.css';
 import Chip from '../Chip/Chip';
-import { useClickOutside } from '../../../hooks/clickOutside';
+import { useClickOutside } from '../../hooks/clickOutside';
 import Input from '../Input/Input';
 import CheckIcon from '../../icons/check.svg?react';
 import Button from '../Button/Button';

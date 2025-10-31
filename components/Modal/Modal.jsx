@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import classes from './Modal.module.css';
-import { useClickOutside } from '../../../hooks/clickOutside';
+import { useClickOutside } from '../../hooks/clickOutside';
 import closeIcon from '../../icons/x-mark.svg';
 import Button from '../Button/Button';
 

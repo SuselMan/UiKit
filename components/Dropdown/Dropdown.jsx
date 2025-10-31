@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classes from './Dropdown.module.css';
 import Chip from '../Chip/Chip';
 import ChevronDown from '../../icons/chevron-down.svg?react';
-import { useClickOutside } from '../../../hooks/clickOutside';
+import { useClickOutside } from '../../hooks/clickOutside';
 import Button from '../Button/Button';
 import clsx from 'clsx';
 
