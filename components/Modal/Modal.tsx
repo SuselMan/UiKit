@@ -5,7 +5,15 @@ import { useClickOutside } from '../../hooks/clickOutside';
 import closeIcon from '../../icons/x-mark.svg';
 import Button from '../Button/Button';
 
-const Modal = ({
+type ModalProps = {
+    children?: React.ReactNode;
+    close?: () => void;
+    title?: React.ReactNode;
+    isCloseShown?: boolean;
+    className?: string;
+};
+
+const Modal: React.FC<ModalProps> = ({
     children,
     close = () => {},
     title,

@@ -1,7 +1,15 @@
 import React from 'react';
 import classes from './Input.module.css';
 
-const Input = ({
+type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> & {
+    label?: string;
+    type?: string;
+    error?: string;
+    inputClasses?: string;
+    className?: string;
+};
+
+const Input: React.FC<InputProps> = ({
     label,
     type = 'text',
     placeholder = '',

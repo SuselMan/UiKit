@@ -3,14 +3,21 @@ import classes from './ToggleButton.module.css';
 import Chip from '../Chip/Chip';
 import Button from '../Button/Button';
 
-const ToggleButton = ({
+type ToggleButtonProps = {
+    options: string[];
+    current: string | string[];
+    onChange: (option: string) => void;
+    multiselect?: boolean;
+} & Partial<React.ComponentProps<typeof Button>>;
+
+const ToggleButton: React.FC<ToggleButtonProps> = ({
     options,
     current,
     onChange,
     multiselect,
     ...props
 }) => {
-    const hasOption = (option) => {
+    const hasOption = (option: string) => {
         if (Array.isArray(current)) {
             return current.includes(option);
         }

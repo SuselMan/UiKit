@@ -2,12 +2,21 @@ import React from 'react';
 import clsx from 'clsx';
 import classes from './Notification.module.css';
 
-const Notification = ({
+type NotificationType = '' | 'neutral' | 'warning' | 'error' | 'success';
+type NotificationSize = 'lg' | 'md' | 'sm';
+
+type NotificationProps = {
+    children?: React.ReactNode;
+    className?: string;
+    type?: NotificationType;
+    size?: NotificationSize;
+};
+
+const Notification: React.FC<NotificationProps> = ({
     children,
     className = '',
     type = '',
     size = 'md',
-    ...props
 }) => {
     const type2Class = {
         neutral: classes.neutral,

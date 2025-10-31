@@ -1,7 +1,13 @@
 import React from 'react';
 import classes from './Card.module.css';
 
-const Card = ({ children, className = '', elevated = false }) => (
+type CardProps = {
+    children?: React.ReactNode;
+    className?: string;
+    elevated?: boolean;
+};
+
+const Card: React.FC<CardProps> = ({ children, className = '', elevated = false }) => (
     <section
         className={`${classes.card} ${elevated ? classes.elevated : ''} ${className}`.trim()}
     >

@@ -1,7 +1,17 @@
 import React from 'react';
 import classes from './Button.module.css';
 
-const Button = ({
+type ButtonVariant = '' | 'ghost' | 'active' | 'secondary' | 'danger';
+type ButtonSize = '' | 'lg';
+
+type ButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {
+    type?: ButtonVariant;
+    size?: ButtonSize;
+    className?: string;
+    children?: React.ReactNode;
+};
+
+const Button: React.FC<ButtonProps> = ({
     children,
     className = '',
     onClick,

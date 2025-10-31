@@ -6,7 +6,14 @@ import { useClickOutside } from '../../hooks/clickOutside';
 import Button from '../Button/Button';
 import clsx from 'clsx';
 
-const Dropdown = ({ children, header, showArrow = true, className }) => {
+type DropdownProps = {
+    children?: React.ReactNode;
+    header?: React.ReactNode;
+    showArrow?: boolean;
+    className?: string;
+};
+
+const Dropdown: React.FC<DropdownProps> = ({ children, header, showArrow = true, className }) => {
     const [isOpen, setIsOpen] = useState(false);
     const ref = useClickOutside(() => {
         setIsOpen(false);

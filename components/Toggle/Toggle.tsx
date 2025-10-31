@@ -2,7 +2,13 @@ import React from 'react';
 import classes from './Toggle.module.css';
 import clsx from 'clsx';
 
-const Toggle = ({ checked, callback, className, ...props }) => {
+type ToggleProps = {
+    checked: boolean;
+    callback: () => void;
+    className?: string;
+};
+
+const Toggle: React.FC<ToggleProps> = ({ checked, callback, className }) => {
     return (
         <div
             className={clsx(

@@ -6,7 +6,13 @@ import Input from '../Input/Input';
 import CheckIcon from '../../icons/check.svg?react';
 import Button from '../Button/Button';
 
-const SearchSelect = ({ options = [], onChange = () => {}, selected = [] }) => {
+type SearchSelectProps = {
+    options?: string[];
+    onChange?: (option: string, add: boolean) => void;
+    selected?: string[];
+};
+
+const SearchSelect: React.FC<SearchSelectProps> = ({ options = [], onChange = () => {}, selected = [] }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [searchString, setSearchString] = useState('');
     const [filteredOptions, setFilteredOptions] = useState(() => options);
@@ -14,7 +20,7 @@ const SearchSelect = ({ options = [], onChange = () => {}, selected = [] }) => {
         setIsOpen(false);
     });
 
-    const onSearchChange = (evt) => {
+    const onSearchChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
         setIsOpen(true);
         setSearchString(evt.target.value);
         setFilteredOptions(

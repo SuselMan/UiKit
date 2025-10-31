@@ -4,7 +4,17 @@ import Button from '../Button/Button';
 import Dropdown from '../Dropdown/Dropdown';
 import clsx from 'clsx';
 
-const ToggleDropdown = ({
+type ToggleDropdownProps = {
+    options: string[];
+    current: string | string[];
+    onChange: (option: string) => void;
+    multiselect?: boolean;
+    placeholder?: string;
+    voc?: Record<string, React.ReactNode> | Record<string, string>;
+    className?: string;
+} & Partial<React.ComponentProps<typeof Button>>;
+
+const ToggleDropdown: React.FC<ToggleDropdownProps> = ({
     options,
     current,
     onChange,
@@ -14,7 +24,7 @@ const ToggleDropdown = ({
     className,
     ...props
 }) => {
-    const hasOption = (option) => {
+    const hasOption = (option: string) => {
         if (Array.isArray(current)) {
             return current.includes(option);
         }
