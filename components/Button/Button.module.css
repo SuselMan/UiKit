@@ -38,7 +38,7 @@
 }
 
 .button.danger {
-    background-color: var(--error-bg);
+    background-color: var(--error-text-color);
     border: none;
     color: var(--white);
 }
