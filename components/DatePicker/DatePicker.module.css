@@ -2,11 +2,13 @@
      position: relative;
      display: inline-flex;
      width: 100%;
+     flex-grow: 1;
+     flex-shrink: 1;
  }
  
  .inputWrapper {
      position: relative;
-     display: inline-flex;
+     display: flex;
      width: 100%;
  }
  
@@ -76,24 +78,16 @@
  
 .dayButton {
     width: calc((280px - 6 * 4px) / 7);
-    aspect-ratio: 1 / 1; /* square */
+    aspect-ratio: 1 / 1;
     padding: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* No colors, borders or rounding here */
 }
-
- .dayButtonSelected {
-    /* removed: using UiKit Button active variant instead */
- }
- 
- .dayButtonDisabled {
-    /* removed: using UiKit Button disabled variant instead */
- }
  
 .inputWithIcon {
     padding-right: 36px;
+    width: calc(100% - 55px);
 }
 
 

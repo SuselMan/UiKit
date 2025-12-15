@@ -129,6 +129,7 @@
                      value={textValue}
                      onChange={() => {}}
                      inputClasses={`${classes.inputWithIcon} ${inputClassName}`}
+                     className={classes.inputWrapper}
                      onFocus={() => setOpen(true)}
                      onClick={() => setOpen(true)}
                      readOnly
