@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import classes from './Modal.module.css';
 import { useClickOutside } from '../../hooks/clickOutside';
-import closeIcon from '../../icons/x-mark.svg';
+import CloseIcon from '../../icons/x-mark.svg?react';
 import Button from '../Button/Button';
 
 type ModalProps = {
@@ -33,12 +33,7 @@ const Modal: React.FC<ModalProps> = ({
                             className={classes.closeButton}
                             onClick={close}
                         >
-                            <img
-                                src={closeIcon}
-                                alt="Close"
-                                width={24}
-                                height={24}
-                            />
+                           <CloseIcon/>
                         </Button>
                     )}
                 </div>
