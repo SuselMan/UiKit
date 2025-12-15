@@ -1,0 +1,99 @@
+ .container {
+     position: relative;
+     display: inline-flex;
+     width: 100%;
+ }
+ 
+ .inputWrapper {
+     position: relative;
+     display: inline-flex;
+     width: 100%;
+ }
+ 
+ .calendarButton {
+     position: absolute;
+     right: 0;
+     top: 28px;
+     transform: translateY(-50%);
+     background: transparent;
+     border: none;
+     padding: var(--spacing-md);
+     cursor: pointer;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+    color: var(--main-text-color);
+ }
+ 
+ .popover {
+     position: absolute;
+     top: calc(55px + var(--spacing-sm));
+     left: 0;
+     background: var(--main-bg);
+     border: 1px solid var(--border-color);
+     box-shadow: none;
+     padding: var(--spacing-lg);
+     z-index: var(--z-index-dropdown);
+     width: 280px;
+     display: flex;
+     flex-direction: column;
+     gap: var(--spacing-lg);
+ }
+ 
+ .header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: var(--spacing-md);
+ }
+ 
+ .selectors {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+ }
+ 
+ .select {
+     padding: 6px 8px;
+    background: var(--second-bg);
+    color: var(--main-text-color);
+    border: 1px solid var(--border-color);
+ }
+ 
+ .weekdays {
+     display: flex;
+     gap: 4px;
+     justify-content: space-between;
+    color: var(--disabled-text-color);
+     font-size: 12px;
+ }
+ 
+ .days {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 4px;
+ }
+ 
+.dayButton {
+    width: calc((280px - 6 * 4px) / 7);
+    aspect-ratio: 1 / 1; /* square */
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* No colors, borders or rounding here */
+}
+
+ .dayButtonSelected {
+    /* removed: using UiKit Button active variant instead */
+ }
+ 
+ .dayButtonDisabled {
+    /* removed: using UiKit Button disabled variant instead */
+ }
+ 
+.inputWithIcon {
+    padding-right: 36px;
+}
+
+

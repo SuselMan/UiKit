@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Button.module.css';
 
-type ButtonVariant =  'primary' |'ghost' | 'active' | 'secondary' | 'danger';
+type ButtonVariant =  'primary' | 'ghost' | 'active' | 'secondary' | 'danger';
 type ButtonSize =  'lg' | 'md' | 'sm';
 
 type ButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {

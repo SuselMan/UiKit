@@ -29,13 +29,12 @@
 }
 
 .error .input {
-    border: 1px solid var(--error-text-color);
-    color: var(--error-text-color);
+    border: 1px solid var(--error-bg);
 }
 
 .error .input:focus,
 .error .input:active {
-    border: 1px solid var(--error-text-color);
+    border: 1px solid var(--error-bg);
 }
 
 .errorText {

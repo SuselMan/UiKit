@@ -63,3 +63,33 @@
     padding: var(--spacing-sm);
     font-size: var(--font-size-sm);
 }
+
+/* Disabled states */
+.button:disabled {
+    cursor: not-allowed;
+    background-color: var(--second-bg);
+    color: var(--disabled-text-color);
+}
+
+.button.ghost:disabled {
+    background-color: transparent;
+    color: var(--disabled-text-color);
+}
+
+.button.secondary:disabled {
+    background-color: var(--second-bg);
+    border: 1px solid var(--border-color);
+    color: var(--disabled-text-color);
+}
+
+.button.active:disabled {
+    background-color: var(--main-active-color);
+    color: var(--white);
+    opacity: 0.6;
+}
+
+.button.danger:disabled {
+    background-color: var(--error-text-color);
+    color: var(--white);
+    opacity: 0.6;
+}

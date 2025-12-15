@@ -5,6 +5,7 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> & {
     label?: string;
     type?: string;
     error?: string;
+    isError?: boolean;
     inputClasses?: string;
     className?: string;
 };
@@ -17,12 +18,13 @@ const Input: React.FC<InputProps> = ({
     onChange = () => {},
     id = '',
     error = '',
+    isError = false,
     inputClasses,
     className = '',
     ...props
 }) => (
     <label
-        className={`${classes.inputContainer} ${error && classes.error} ${className}`}
+        className={`${classes.inputContainer} ${(error || isError) && classes.error} ${className}`}
         htmlFor={id}
     >
         {label && <span className={classes.inputLabel}>{label}</span>}
@@ -35,7 +37,7 @@ const Input: React.FC<InputProps> = ({
             onChange={onChange}
             {...props}
         />
-        <div className={classes.errorText}>{error}</div>
+        {!!error && <div className={classes.errorText}>{error}</div>}
     </label>
 );
 
