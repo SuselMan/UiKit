@@ -1,28 +1,4 @@
 :root {
-    --white: white;
-    --overlay-color: rgba(0, 0, 0, 0.4);
-    --opacity-main-bg: rgba(255, 255, 255, 0.5);
-    
-    --shadow-color: #bebebe;
-    --second-shadow-color: #d5d5d5;
-    --link-text: #0c0c0c;
-    --main-active-color: rgb(106, 187, 185);
-    --main-active-color-hover: rgb(80, 140, 138);
-    --border-color: #d9d9d9;
-    --modal-overlay-color: rgba(255, 255, 255, 0.6);
-    
-    --main-text-color: #0c0c0c;
-    --error-text-color: #9d5454;
-    --success-text-color: #91b037;
-    --disabled-text-color: #949494;
-
-    --main-bg: white;
-    --second-bg: #f5f5f5;
-    --warning-bg: #fdcb6e;
-    --success-bg: #d0e493;
-    --error-bg: #f3caca;
-    --error-bg-hover: #ca7c7c;
-
     --spacing-xs: 2px;
     --spacing-sm: 6px;
     --spacing-md: 12px;
@@ -51,4 +27,56 @@
 
     --box-shadow-lg: 0 32px 60px rgba(0, 0, 0, 0.05);
     --box-shadow-md: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+:root {
+    --white: white;
+    --overlay-color: rgba(0, 0, 0, 0.4);
+    --opacity-main-bg: rgba(255, 255, 255, 0.5);
+
+    --shadow-color: #bebebe;
+    --second-shadow-color: #d5d5d5;
+    --link-text: #0c0c0c;
+    --main-active-color: rgb(106, 187, 185);
+    --main-active-color-hover: rgb(80, 140, 138);
+    --border-color: #d9d9d9;
+    --modal-overlay-color: rgba(255, 255, 255, 0.6);
+
+    --main-text-color: #0c0c0c;
+    --error-text-color: #9d5454;
+    --success-text-color: #91b037;
+    --disabled-text-color: #949494;
+
+    --main-bg: white;
+    --second-bg: #f5f5f5;
+    --warning-bg: #fdcb6e;
+    --success-bg: #d0e493;
+    --error-bg: #f3caca;
+    --error-bg-hover: #ca7c7c;
+}
+
+:root[data-theme='dark'] {
+    --white: white;
+    --overlay-color: rgba(0, 0, 0, 0.4);
+    --opacity-main-bg: rgba(255, 255, 255, 0.5);
+
+    --shadow-color: #bebebe;
+    --second-shadow-color: #d5d5d5;
+    --link-text: #d0d0d0;
+    --main-active-color: rgb(106, 187, 185);
+    --main-active-color-hover: rgb(80, 140, 138);
+    --border-color: #4a4a4a;
+    --modal-overlay-color: rgba(255, 255, 255, 0.6);
+
+    --main-text-color: #ffffff;
+    --error-text-color: #9d5454;
+    --success-text-color: #91b037;
+    --disabled-text-color: #949494;
+
+    --main-bg: rgb(46, 46, 46);
+    --second-bg: #3a3a3a;
+    --warning-bg: #fdcb6e;
+    --success-bg: #d0e493;
+    --error-bg: #f3caca;
+    --error-bg-hover: #ca7c7c;
 }

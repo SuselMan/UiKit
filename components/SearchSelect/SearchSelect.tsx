@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
+import React, {SyntheticEvent, useRef, useState} from 'react';
 import classes from './SearchSelect.module.css';
 import Chip from '../Chip/Chip';
 import { useClickOutside } from '../../hooks/clickOutside';
-import Input from '../Input/Input';
 import CheckIcon from '../../icons/check.svg?react';
 import Button from '../Button/Button';
 
 type SearchSelectProps = {
     options?: string[];
     onChange?: (option: string, add: boolean) => void;
+    onClear?: () => void;
     selected?: string[];
 };
 
-const SearchSelect: React.FC<SearchSelectProps> = ({ options = [], onChange = () => {}, selected = [] }) => {
+const SearchSelect: React.FC<SearchSelectProps> = ({ options = [], onChange = () => {}, onClear = () => {}, selected = [] }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [searchString, setSearchString] = useState('');
     const [filteredOptions, setFilteredOptions] = useState(() => options);
     const ref = useClickOutside(() => {
         setIsOpen(false);
     });
+    const inputRef = useRef<HTMLInputElement | null>(null);
+    const onClearHandler = (e: SyntheticEvent) => {
+        e.stopPropagation();
+        setIsOpen(false);
+        onClear();
+    }
 
     const onSearchChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
         setIsOpen(true);
@@ -30,15 +36,37 @@ const SearchSelect: React.FC<SearchSelectProps> = ({ options = [], onChange = ()
         );
     };
 
+    const removeChip = (opt: string, add: boolean) => {
+        onChange(opt, add)
+        setIsOpen(false);
+    }
+
     return (
         <div className={classes.dropdown} ref={ref}>
-            <Input
-                onClick={() => setIsOpen(true)}
-                onChange={onSearchChange}
-                value={searchString}
-                placeholder={'Select columns'}
-                inputClasses={isOpen ? classes.openedInput : ''}
-            />
+            <div
+                className={`${classes.field} ${isOpen ? classes.openedField : ''}`}
+                onClick={() => {
+                    setIsOpen(true);
+                    inputRef.current?.focus();
+                }}
+                role="button"
+            >
+                {selected.map((opt) => (
+                    <Chip key={opt} className={classes.chip} close={() => removeChip(opt, false)}>
+                        {opt}
+                    </Chip>
+                ))}
+                <input
+                    ref={inputRef}
+                    className={classes.inputInline}
+                    value={searchString}
+                    onChange={onSearchChange}
+                    placeholder={selected.length ? '' : 'Select columns'}
+                />
+                {!!selected.length && (
+                    <Button onClick={onClearHandler} size={'sm'}>Clear</Button>
+                )}
+            </div>
             <div
                 className={`${classes.dropdownMenu} ${!isOpen && classes.hidden}`}
             >

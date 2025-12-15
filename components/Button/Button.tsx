@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Button.module.css';
 
 type ButtonVariant =  'primary' |'ghost' | 'active' | 'secondary' | 'danger';
-type ButtonSize =  'lg';
+type ButtonSize =  'lg' | 'md' | 'sm';
 
 type ButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {
     type?: ButtonVariant;
@@ -30,6 +30,8 @@ const Button: React.FC<ButtonProps> = ({
 
     const size2Class = {
         lg: classes.lg,
+        md: classes.md,
+        sm: classes.sm,
     };
 
     return (

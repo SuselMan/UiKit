@@ -51,4 +51,15 @@
 
 .button.lg {
     padding: var(--spacing-lg);
+    font-size: var(--font-size-lg);
+}
+
+.button.md {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-md);
+}
+
+.button.sm {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-sm);
 }

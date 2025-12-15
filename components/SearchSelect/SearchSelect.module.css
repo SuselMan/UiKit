@@ -29,7 +29,29 @@
     white-space: nowrap;
 }
 
-.openedInput {
+.field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    align-items: center;
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-color);
+    cursor: text;
+}
+
+.openedField {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.chip {
+}
+
+.inputInline {
+    border: 0;
+    outline: none;
+    flex: 1;
+    min-width: 80px;
+    font-size: var(--font-size-md);
+    background: transparent;
 }
