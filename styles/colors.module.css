@@ -66,7 +66,7 @@
     --main-active-color: rgb(106, 187, 185);
     --main-active-color-hover: rgb(80, 140, 138);
     --border-color: #4a4a4a;
-    --modal-overlay-color: rgba(255, 255, 255, 0.6);
+    --modal-overlay-color: rgba(0, 0, 0, 0);
 
     --main-text-color: #ffffff;
     --error-text-color: #9d5454;
