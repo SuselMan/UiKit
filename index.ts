@@ -14,4 +14,3 @@ export { default as Toggle } from './components/Toggle/Toggle';
 export { default as ToggleButton } from './components/ToggleButton/ToggleButton';
 export { default as ToggleDropdown } from './components/ToggleDropdown/ToggleDropdown';
 export { useClickOutside } from './hooks/clickOutside';
-
