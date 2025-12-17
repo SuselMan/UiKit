@@ -6,7 +6,6 @@ import { IMaskInput } from 'react-imask';
 import classes from './DatePicker.module.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
-import CalendarIcon from '../../icons/calendar.svg?react';
 import ChevronLeftIcon from '../../icons/chevron-left.svg?react';
 import ChevronRightIcon from '../../icons/chevron-right.svg?react';
 import { useClickOutside } from '../../hooks/useClickOutside';
@@ -153,14 +152,6 @@ const DatePicker: React.FC<DatePickerProps> = ({
           readOnly
           disabled={disabled}
         />
-        <Button
-          type="ghost"
-          className={classes.calendarButton}
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Open calendar"
-        >
-          <CalendarIcon />
-        </Button>
         {/* Hidden masked input to capture manual typing when needed */}
         <IMaskInput
           mask="00/00/0000"
