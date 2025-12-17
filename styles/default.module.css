@@ -18,6 +18,14 @@ body {
   user-select: none;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button {
+  -webkit-touch-callout: none;
+}
+
 h2 {
     font-size: var(--font-size-h2);
 }
