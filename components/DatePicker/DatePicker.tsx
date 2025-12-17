@@ -1,4 +1,6 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, {
+  useEffect, useMemo, useRef, useState,
+} from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import { IMaskInput } from 'react-imask';
 import classes from './DatePicker.module.css';
@@ -44,6 +46,20 @@ const DatePicker: React.FC<DatePickerProps> = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const lastAcceptedRef = useRef<string>('');
   useClickOutside([containerRef], () => setOpen(false), open);
+
+  useEffect(() => {
+    const p = value ? dayjs(value) : null;
+    if (p && p.isValid()) {
+      const nextText = p.format('DD/MM/YYYY');
+      lastAcceptedRef.current = nextText;
+      setTextValue(nextText);
+      setViewYear(p.year());
+      setViewMonth(p.month());
+      return;
+    }
+    lastAcceptedRef.current = '';
+    setTextValue('');
+  }, [value]);
 
   const years = useMemo(() => {
     const currentYear = dayjs().year();
