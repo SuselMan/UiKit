@@ -1,0 +1,28 @@
+.spinner {
+    display: inline-block;
+    color: currentColor;
+    line-height: 0;
+}
+
+.spinner svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.lg {
+    width: 48px;
+    height: 48px;
+}
+
+.md {
+    width: 32px;
+    height: 32px;
+}
+
+.sm {
+    width: 18px;
+    height: 18px;
+}
+
+
