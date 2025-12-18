@@ -67,17 +67,17 @@
     --link-text: #d0d0d0;
     --main-active-color: rgb(106, 187, 185);
     --main-active-color-hover: rgb(80, 140, 138);
-    --border-color: #4a4a4a;
+    --border-color: #2e2e2e;
     --modal-overlay-color: rgba(0, 0, 0, 0);
 
-    --main-text-color: #ffffff;
-    --second-text-color: #dddddd;
+    --main-text-color: #e7e7e7;
+    --second-text-color: #c0c0c0;
     --error-text-color: #9d5454;
     --success-text-color: #91b037;
     --disabled-text-color: #949494;
 
-    --main-bg: rgb(46, 46, 46);
-    --second-bg: #3a3a3a;
+    --main-bg: rgb(28, 28, 28);
+    --second-bg: #222222;
     --warning-bg: #fdcb6e;
     --success-bg: #d0e493;
     --error-bg: #f3caca;
