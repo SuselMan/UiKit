@@ -49,6 +49,8 @@
     --success-text-color: #91b037;
     --disabled-text-color: #949494;
 
+    --chart-grid-color: rgba(0, 0, 0, 0.1);
+
     --main-bg: white;
     --second-bg: #f5f5f5;
     --warning-bg: #fdcb6e;
@@ -75,6 +77,8 @@
     --error-text-color: #9d5454;
     --success-text-color: #91b037;
     --disabled-text-color: #949494;
+
+    --chart-grid-color: rgba(255, 255, 255, 0.1);
 
     --main-bg: rgb(28, 28, 28);
     --second-bg: #222222;
