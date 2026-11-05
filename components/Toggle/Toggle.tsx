@@ -6,9 +6,12 @@ type ToggleProps = {
   checked: boolean;
   callback: () => void;
   className?: string;
+  'aria-label'?: string;
 };
 
-const Toggle: React.FC<ToggleProps> = ({ checked, callback, className }) => (
+const Toggle: React.FC<ToggleProps> = ({
+  checked, callback, className, 'aria-label': ariaLabel = 'Toggle',
+}) => (
   <div
     className={clsx(
       classes.toggle,
@@ -24,7 +27,7 @@ const Toggle: React.FC<ToggleProps> = ({ checked, callback, className }) => (
     }}
     role="switch"
     aria-checked={checked}
-    aria-label="Toggle"
+    aria-label={ariaLabel}
     tabIndex={0}
   >
     <div className={clsx(classes.circle)} />
