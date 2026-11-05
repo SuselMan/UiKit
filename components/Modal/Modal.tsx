@@ -24,13 +24,14 @@ const Modal: React.FC<ModalProps> = ({
 
   return (
     <div className={clsx(classes.overlay)}>
-      <div ref={ref} className={clsx(classes.modal, className)}>
+      <div ref={ref} className={clsx(classes.modal, className)} role="dialog" aria-modal="true" aria-label={typeof title === 'string' ? title : undefined}>
         <div className={classes.header}>
           <h2>{title}</h2>
           {isCloseShown && (
           <Button
             type="ghost"
             className={classes.closeButton}
+            aria-label="Закрыть"
             onClick={close}
           >
             <CloseIcon />
