@@ -10,7 +10,7 @@
 }
 .badge.high, .badge.high:hover {
   background: var(--data-high-bg);
-  color: var(--data-marked-text-color);
+  color: var(--white);
 }
 .badge.low, .badge.low:hover {
   background: var(--data-low-bg);
