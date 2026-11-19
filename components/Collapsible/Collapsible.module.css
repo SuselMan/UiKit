@@ -1,0 +1,1 @@
+ .root{color:var(--main-text-color)}.summary{cursor:pointer;color:var(--second-text-color);padding:var(--spacing-sm) 0;overflow-wrap:anywhere}.summary:focus-visible{outline:2px solid var(--main-active-color);outline-offset:2px}.content{padding-top:var(--spacing-sm);min-width:0}

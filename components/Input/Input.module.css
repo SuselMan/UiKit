@@ -46,3 +46,5 @@
     color: var(--error-text-color);
     margin-top: var(--spacing-xs);
 }
+.rounded{border-radius:var(--border-radius-md)}
+.compact{padding:var(--spacing-md)}

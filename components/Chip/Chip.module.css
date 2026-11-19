@@ -10,3 +10,5 @@
     gap: var(--spacing-md);
     cursor: pointer;
 }
+
+.choice{border-radius:var(--border-radius-round);white-space:nowrap}

@@ -93,3 +93,5 @@
     color: var(--white);
     opacity: 0.6;
 }
+.rounded{border-radius:var(--border-radius-md)}
+.pill{border-radius:var(--border-radius-round)}

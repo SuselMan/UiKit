@@ -9,3 +9,6 @@
 .elevated {
     box-shadow: var(--box-shadow-lg)
 }
+
+.rounded{border-radius:var(--border-radius-lg)}
+.largePadding{padding:var(--spacing-lg)}

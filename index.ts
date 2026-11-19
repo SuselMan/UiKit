@@ -14,3 +14,7 @@ export { default as Toggle } from './components/Toggle/Toggle';
 export { default as ToggleButton } from './components/ToggleButton/ToggleButton';
 export { default as ToggleDropdown } from './components/ToggleDropdown/ToggleDropdown';
 export { useClickOutside } from './hooks/clickOutside';
+export { default as Collapsible } from './components/Collapsible/Collapsible';
+export { default as MetricCard } from './components/MetricCard/MetricCard';
+export { default as ScrollNav } from './components/ScrollNav/ScrollNav';
+export { default as ChartHatch } from './components/ChartHatch/ChartHatch';
