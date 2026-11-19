@@ -34,8 +34,9 @@ const Dropdown: React.FC<DropdownProps> = ({
     const active = (ref.current?.getRootNode() as Document | ShadowRoot)?.activeElement;
     const index = items.indexOf(active as HTMLButtonElement);
     const next = event.key === 'Home' ? 0 : event.key === 'End' ? items.length - 1
+      : index < 0 ? (event.key === 'ArrowUp' ? items.length - 1 : 0)
       : (index + (event.key === 'ArrowUp' ? items.length - 1 : 1)) % items.length;
-    items[next]?.focus();
+    requestAnimationFrame(() => { if (items[next]?.isConnected) items[next].focus(); });
   };
   return (
     <div className={clsx(classes.dropdown, className)} ref={ref} onKeyDown={onKeyDown}>
