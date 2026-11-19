@@ -1,0 +1,22 @@
+.badge {
+  display: block;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.badge.normal, .badge.normal:hover {
+  background: transparent;
+  color: var(--main-text-color);
+}
+.badge.high, .badge.high:hover {
+  background: var(--data-high-bg);
+  color: var(--data-marked-text-color);
+}
+.badge.low, .badge.low:hover {
+  background: var(--data-low-bg);
+  color: var(--data-marked-text-color);
+}
+.badge.unknown, .badge.unknown:hover {
+  background: var(--second-bg);
+  color: var(--second-text-color);
+}

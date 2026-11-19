@@ -18,3 +18,4 @@ export { default as Collapsible } from './components/Collapsible/Collapsible';
 export { default as MetricCard } from './components/MetricCard/MetricCard';
 export { default as ScrollNav } from './components/ScrollNav/ScrollNav';
 export { default as ChartHatch } from './components/ChartHatch/ChartHatch';
+export { default as ValueBadge } from './components/ValueBadge/ValueBadge';

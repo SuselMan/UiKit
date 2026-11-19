@@ -87,3 +87,10 @@
     --error-bg: #f3caca;
     --error-bg-hover: #ca7c7c;
 }
+
+/* Value highlighting from Tonome. Classification belongs to the consumer. */
+:root {
+    --data-high-bg: #fee08b;
+    --data-low-bg: #9be5e3;
+    --data-marked-text-color: #0c0c0c;
+}
