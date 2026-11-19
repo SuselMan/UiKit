@@ -26,7 +26,7 @@
   Dropdown. `nativeProps` передаёт доступное имя/id/disabled, `nativeLabels`
   задаёт строковые названия для опций с React-содержимым в `voc`.
   По умолчанию поведение прежнее; multiselect не превращается в single select.
-- `Chip onClick/selected/disabled`: фильтр-кнопка с `aria-pressed`.
+- `Chip onClick/selected/disabled`: фильтр-кнопка с `aria-pressed`, без обводки, на вторичной поверхности.
   Прежний вариант с `close` для удаляемых тегов сохранён.
 - `Button shape`: `default` (прежний вид), `rounded`, `pill`.
 - `Input rounded/density="compact"`: необязательные варианты оформления.

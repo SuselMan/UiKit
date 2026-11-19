@@ -11,4 +11,4 @@
     cursor: pointer;
 }
 
-.choice{border-radius:var(--border-radius-round);white-space:nowrap}
+.choice{border-radius:var(--border-radius-round);white-space:nowrap;background:var(--second-bg);border:none}

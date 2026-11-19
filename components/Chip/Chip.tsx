@@ -16,7 +16,7 @@ export type ChipProps = {
 const Chip = ({ className = '', children, close, onClick, selected, disabled, ...props }: ChipProps) => {
     const onClose = (e: SyntheticEvent) => { e.stopPropagation(); close?.(); };
     if (onClick)
-        return <Button {...props} className={`${classes.choice} ${className}`} type={selected ? 'active' : 'secondary'} size="sm" onClick={onClick} disabled={disabled} aria-pressed={selected}>{children}</Button>;
+        return <Button {...props} className={`${classes.choice} ${className}`} type={selected ? 'active' : 'primary'} size="sm" onClick={onClick} disabled={disabled} aria-pressed={selected}>{children}</Button>;
     return <div {...props} className={`${classes.chip} ${className}`}><span>{children}</span>{close && <Button type="ghost" aria-label="Удалить" onClick={onClose}><CloseIcon width={16} height={16}/></Button>}</div>;
 };
 export default Chip;
